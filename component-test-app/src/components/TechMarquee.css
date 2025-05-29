@@ -1,0 +1,34 @@
+.tech-marquee-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+  height: 100vh;
+  white-space: nowrap;
+}
+
+.tech-marquee {
+  display: flex;
+  align-items: center; /* 👈 ensures icons are vertically centered */
+  gap: 2rem;
+  animation: scroll-left 20s linear infinite;
+}
+
+.tech-icon {
+  font-size: 2.5rem;
+  color: #00BCD4;
+  transition: transform 0.2s ease;
+}
+
+.tech-icon:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

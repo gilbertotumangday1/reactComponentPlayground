@@ -1,0 +1,45 @@
+/* Base text styles */
+.text-primary {
+  color: #ffffff;
+}
+
+.text-secondary {
+  color: #B0BEC5;
+}
+
+/* Heading styles */
+.heading {
+  font-size: 32px;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+  color: #00BCD4;
+}
+
+.typing {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #00BCD4;
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Paragraph */
+.paragraph {
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.6;
+  font-family: system-ui, sans-serif;
+}
+
+/* Caption */
+.caption {
+  font-size: 12px;
+  color: #B0BEC5;
+  font-style: italic;
+}

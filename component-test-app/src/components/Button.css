@@ -11,15 +11,17 @@
 .button.primary{
     background-color: #00BCD4;
     color: #1E1E2F;
+    outline: 2px white solid;
 }
 
 .button.primary:hover{
-    background-color: #00ACC1;
+    background-color: #007080;
 }
 
 .button.secondary{
     background-color: #2A2A3C;
-    color: #FFFFFF
+    color: #FFFFFF;
+    outline: 2px white solid;
 }
 
 .button.secondary:hover{
