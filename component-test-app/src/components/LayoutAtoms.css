@@ -1,0 +1,44 @@
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.box {
+  padding: 1rem;
+  background-color: #2A2A40;
+  border-radius: 8px;
+}
+
+.bar {
+  width: 100%;
+  background-color: #00BCD4;
+  padding: 1rem;
+  color: white;
+  font-weight: bold;
+}
+
+.divider {
+  height: 1px;
+  background-color: #B0BEC5;
+  margin: 1.5rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section {
+  padding: 4rem 1rem;
+  background-color: #1E1E2F;
+}

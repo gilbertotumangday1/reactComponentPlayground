@@ -1,0 +1,16 @@
+.clickable-text {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  text-shadow: 1px 1px 2px #00BCD4;
+  cursor: pointer;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.clickable-text:hover {
+  color: #00BCD4;
+  text-shadow: 1px 1px 2px #00BCD4;
+}
