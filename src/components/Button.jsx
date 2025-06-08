@@ -1,4 +1,5 @@
 //import css style
+"use client"
 import "./Button.css"
 
 //main component function

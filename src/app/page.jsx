@@ -15,6 +15,9 @@ import {
   Flex,
   Section
 } from "@/components/LayoutAtoms";
+import Avatar from "@/components/Avatar";
+import Thumbnail from "@/components/Thumbnail";
+import MediaPlayer from "@/components/MediaPlayer";
 
 export default function ComponentPlayground() {
   return (
@@ -26,7 +29,7 @@ export default function ComponentPlayground() {
         padding: "2rem"
       }}
     >
-      <Heading>Header</Heading>
+      <Heading>Primary Heading</Heading>
 
       <Paragraph>
         This is a playground for testing reusable components like buttons and typography.
@@ -72,7 +75,7 @@ export default function ComponentPlayground() {
             marginTop: "2rem",
           }}
         >
-          <div style={{ width: "50%" }}>
+          <div style={{ width: "100%" }}>
             <TechMarquee />
           </div>
         </div>
@@ -124,6 +127,26 @@ export default function ComponentPlayground() {
           <div style={{ backgroundColor: "#3A3A5A", padding: "1rem" }}>Grid Item 2</div>
           <div style={{ backgroundColor: "#3A3A5A", padding: "1rem" }}>Grid Item 3</div>
         </Grid>
+      </div>
+
+      <div style={{marginTop: "4rem"}}>
+        <Heading>Media</Heading>
+        <div style ={{margin: "10px"}}>
+          <Container style={{display: "flex", justifyContent: "space-around", alignItems: "center", backgroundColor: "#2a2a40", padding: "1rem" }}>
+            <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+              <Avatar src="/me.jpg" alt="Gilberto Tumangday" size="100"/>
+              <Caption>Avatar</Caption>
+            </div>
+            <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+              <Thumbnail src="/throne.jpg" alt="GOT" width={320}/>
+              <Caption>Thumbnail</Caption>
+            </div>
+            <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+              <MediaPlayer src="/demo.mp4" width={640} height={360} />
+              <Caption>Video</Caption>
+            </div>
+          </Container>
+        </div>
       </div>
     </main>
   );

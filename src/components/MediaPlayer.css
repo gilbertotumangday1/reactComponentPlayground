@@ -1,0 +1,14 @@
+.media-link {
+  display: inline-block;
+}
+
+.media-player {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.media-player:hover {
+  transform: scale(1.03);
+}

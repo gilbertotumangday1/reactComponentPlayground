@@ -9,10 +9,12 @@
 
 /* Heading styles */
 .heading {
-  font-size: 32px;
+  font-size: clamp(1.5rem, 6vw, 2.5rem);  /* Responsive from ~24px to 40px */
   font-weight: 600;
   font-family: 'Courier New', monospace;
-  color: #00BCD4;
+  color: white;
+  text-shadow: 1px 1px 7px #00BCD4;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .typing {
@@ -31,7 +33,7 @@
 
 /* Paragraph */
 .paragraph {
-  font-size: 16px;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);  /* ~16px to 20px */
   color: #ffffff;
   line-height: 1.6;
   font-family: system-ui, sans-serif;
@@ -39,7 +41,7 @@
 
 /* Caption */
 .caption {
-  font-size: 12px;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);  /* ~12px to 14px */
   color: #B0BEC5;
   font-style: italic;
 }

@@ -1,0 +1,22 @@
+.thumbnail-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.thumbnail {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.03);
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}

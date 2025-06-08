@@ -7,7 +7,7 @@
 
 .tech-marquee {
   display: flex;
-  align-items: center; /* 👈 ensures icons are vertically centered */
+  align-items: center; 
   gap: 2rem;
   animation: scroll-left 20s linear infinite;
 }
@@ -20,6 +20,8 @@
 
 .tech-icon:hover {
   color: white;
+  transition: color 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 4px #00BCD4); 
 }
 
 @keyframes scroll-left {

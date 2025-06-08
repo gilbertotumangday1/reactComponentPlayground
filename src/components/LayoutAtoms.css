@@ -3,6 +3,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+  border-radius: 8px;
 }
 
 .box {
@@ -41,4 +42,8 @@
 .section {
   padding: 4rem 1rem;
   background-color: #1E1E2F;
+}
+
+.container:hover,.section:hover,.divider:hover,.box:hover,.bar:hover{
+  filter: drop-shadow(0 0 4px white); /* ✨ adds the glow effect */
 }
