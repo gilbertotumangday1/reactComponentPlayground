@@ -10,10 +10,8 @@ import {
   SiCplusplus,
   SiC,
 } from "react-icons/si";
-
-import { FaJava } from "react-icons/fa"; // ✅ use this for Java
-
-import { Cpu, Code2 } from "lucide-react";
+import { FaJava } from "react-icons/fa";
+import { Cpu } from "lucide-react";
 import "./TechMarquee.css";
 
 const icons = [
