@@ -36,6 +36,10 @@ export default function WebsitePage() {
             Gilberto Tumangday
           </Heading>
 
+          <Caption>
+            University of Toronto Electrical & Computer Engineering Student
+          </Caption>
+
           {/* Enlarged Social Icons */}
           <div style={{ display: 'flex', gap: '2rem', marginTop: '2rem' }}>
             <IconButton
@@ -69,7 +73,7 @@ export default function WebsitePage() {
           >
             <ClickableText href="/resume.pdf">Resume</ClickableText>
             <ClickableText>Projects</ClickableText>
-            <ClickableText>About Me</ClickableText>
+            <ClickableText href="/website/about">About Me</ClickableText>
             <ClickableText>Gallery</ClickableText>
             <ClickableText>Blog</ClickableText>
           </div>
