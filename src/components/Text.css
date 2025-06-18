@@ -45,3 +45,8 @@
   color: #B0BEC5;
   font-style: italic;
 }
+
+.navbar-heading:hover{
+  color: #00BCD4;
+  text-shadow: 1px 1px 2px #00BCD4;
+}

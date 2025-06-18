@@ -11,7 +11,7 @@ export default function Navbar() {
     <nav className="navbar">
       {/* Name on the left */}
       <Link href="/website" className="navbar-name">
-        <Heading>Gilberto Tumangday</Heading>
+        <Heading className="navbar-heading">Gilberto Tumangday</Heading>
       </Link>
 
       {/* Desktop Navigation */}

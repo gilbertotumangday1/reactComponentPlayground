@@ -1,0 +1,29 @@
+.masonry-wrapper {
+  column-count: 3;
+  column-gap: 1.5rem;
+  padding: 2rem;
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
+/* Override Thumbnail width only inside Gallery */
+.gallery-item .thumbnail {
+  width: 100% !important; /* Makes thumbnails expand to fill column width */
+}
+
+/* Responsive: 2 columns on medium screens */
+@media (max-width: 1024px) {
+  .masonry-wrapper {
+    column-count: 2;
+  }
+}
+
+/* Responsive: 1 column on small screens */
+@media (max-width: 768px) {
+  .masonry-wrapper {
+    column-count: 1;
+  }
+}

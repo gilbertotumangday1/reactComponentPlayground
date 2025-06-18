@@ -8,6 +8,7 @@ import ClickableText from '@/components/ClickableText';
 import TechMarquee from '@/components/TechMarquee';
 import { Linkedin, Github, Instagram } from 'lucide-react';
 
+
 export default function WebsitePage() {
   return (
     <ClientOnly>
@@ -71,7 +72,7 @@ export default function WebsitePage() {
               marginTop: '2rem',
             }}
           >
-            <ClickableText href="/resume.pdf">Resume</ClickableText>
+            <ClickableText href="/resume.pdf" target="_blank" >Resume</ClickableText>
             <ClickableText>Projects</ClickableText>
             <ClickableText href="/website/about">About Me</ClickableText>
             <ClickableText>Gallery</ClickableText>
