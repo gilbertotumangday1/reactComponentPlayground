@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       {/* Name on the left */}
-      <Link href="/website" className="navbar-name">
+      <Link href="../../" className="navbar-name">
         <Heading className="navbar-heading">Gilberto Tumangday</Heading>
       </Link>
 
