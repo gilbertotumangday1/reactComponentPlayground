@@ -7,7 +7,7 @@ import IconButton from '@/components/IconButton';
 import ClickableText from '@/components/ClickableText';
 import TechMarquee from '@/components/TechMarquee';
 import { Linkedin, Github, Instagram } from 'lucide-react';
-
+import './WebsitePage.css'; // ⬅️ Import your styles here
 
 export default function WebsitePage() {
   return (
@@ -72,15 +72,15 @@ export default function WebsitePage() {
               marginTop: '2rem',
             }}
           >
-            <ClickableText href="/resume.pdf" target="_blank" >Resume</ClickableText>
+            <ClickableText href="/resume.pdf" target="_blank">Resume</ClickableText>
             <ClickableText>Projects</ClickableText>
             <ClickableText href="/website/about">About Me</ClickableText>
             <ClickableText>Gallery</ClickableText>
             <ClickableText>Blog</ClickableText>
           </div>
 
-          {/* Tech Marquee: half width */}
-          <div style={{ width: '50%', marginTop: '2rem' }}>
+          {/* Tech Marquee with fade effect and responsive width */}
+          <div className="tech-marquee-wrapper">
             <TechMarquee />
           </div>
         </main>

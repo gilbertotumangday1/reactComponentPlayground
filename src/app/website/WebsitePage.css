@@ -1,0 +1,16 @@
+.tech-marquee-wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: 0.75rem auto; /* ⬅️ Smaller vertical spacing */
+  overflow: hidden;
+  position: relative;
+
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+@media (max-width: 768px) {
+  .tech-marquee-wrapper {
+    max-width: 100%;
+  }
+}
