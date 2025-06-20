@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Heading } from '@/components/Text';
 import ClickableText from '@/components/ClickableText';
 import { HamburgerIcon } from '@/components/TechnicalIcons';
@@ -10,6 +11,7 @@ import './Navbar.css';
 export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const pathname = usePathname();
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -35,6 +37,23 @@ export default function Navbar() {
     { href: '/resume.pdf', label: 'Resume', target: '_blank' },
   ];
 
+  // Function to check if the current item is active
+  const isCurrentPage = (href) => {
+    // For resume PDF, never consider it current since it opens in new tab
+    if (href === '/resume.pdf') return false;
+    // Check if it matches the current pathname
+    return pathname === href;
+  };
+
+  // Style for selected page
+  const getSelectedStyle = (isActive) => {
+    if (!isActive) return {};
+    return {
+      color: '#00BCD4',
+      textShadow: '1px 1px 2px #00BCD4',
+    };
+  };
+
   return (
     <nav className="navbar">
       {/* Name on the left */}
@@ -45,13 +64,15 @@ export default function Navbar() {
       {/* Desktop Navigation */}
       <div className="navbar-links desktop-only">
         {menuItems.map((item) => (
-          <ClickableText 
-            key={item.href} 
-            href={item.href} 
-            target={item.target}
-          >
-            {item.label}
-          </ClickableText>
+          <div key={item.href}>
+            <ClickableText 
+              href={item.href} 
+              target={item.target}
+              style={getSelectedStyle(isCurrentPage(item.href))}
+            >
+              {item.label}
+            </ClickableText>
+          </div>
         ))}
       </div>
 
@@ -65,21 +86,23 @@ export default function Navbar() {
         {isDropdownOpen && (
           <div className="dropdown-menu">
             {menuItems.map((item) => (
-              <ClickableText 
-                key={item.href} 
-                href={item.href} 
-                target={item.target}
-                onClick={() => setIsDropdownOpen(false)}
-                style={{ 
-                  display: 'block', 
-                  padding: '0.75rem 1rem',
-                  fontSize: '1rem',
-                  textDecoration: 'none',
-                  borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
-                }}
-              >
-                {item.label}
-              </ClickableText>
+              <div key={item.href}>
+                <ClickableText 
+                  href={item.href} 
+                  target={item.target}
+                  onClick={() => setIsDropdownOpen(false)}
+                  style={{ 
+                    display: 'block', 
+                    padding: '0.75rem 1rem',
+                    fontSize: '1rem',
+                    textDecoration: 'none',
+                    borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+                    ...getSelectedStyle(isCurrentPage(item.href))
+                  }}
+                >
+                  {item.label}
+                </ClickableText>
+              </div>
             ))}
           </div>
         )}

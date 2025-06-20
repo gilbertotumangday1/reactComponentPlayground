@@ -1,25 +1,10 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Navbar from '@/components/Navbar';
 import { Caption } from '@/components/Text';
-import LoadingSpinner from '@/components/LoadingSpinner';
 
 export default function BlogPage() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return <LoadingSpinner text="Loading Blog..." />;
-  }
-
   return (
     <div
       style={{

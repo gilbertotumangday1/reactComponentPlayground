@@ -1,29 +1,13 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Navbar from '@/components/Navbar';
 import { Caption } from '@/components/Text';
 import ProjectCard from '@/components/ProjectCard';
 import SwipeBox from '@/components/SwipeBox';
-import LoadingSpinner from '@/components/LoadingSpinner';
 import './projects.css';
 
 export default function ProjectsPage() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate loading time for components and assets
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1500); // 1.5 seconds loading time
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return <LoadingSpinner text="Loading Projects..." />;
-  }
-
   return (
     <div
       style={{
@@ -115,11 +99,22 @@ export default function ProjectsPage() {
             <ProjectCard
               title="Beast Hunter"
               mediaFolder="/projects/beastHunter"
-              description="A comprehensive component library built with React and Next.js featuring reusable UI elements and responsive design."
-              technologies={['React', 'Next.js', 'CSS', 'JavaScript']}
+              description="Multi level platformer game programmed in Java using JFrame and AWT for graphics. Won the St Michael's College School Senior Computer Science competition evaluated by industry professionals."
+              technologies={['Java', 'JFrame', 'AWT', 'Game Design']}
               projectLink="https://github.com/gilbertotumangday1/beast-hunter"
               linkText="View on GitHub"
               TextLink="https://github.com/gilbertotumangday1/beast-hunter"
+              scale={3}
+            />
+
+            <ProjectCard
+              title="gilbertotumangday.dev"
+              mediaFolder="/projects/thispage"
+              description="This website was designed using Figma and built using React with Next.js and CSS with reusable atoms. To see the component library go to gilbertotumangday.dev/library!"
+              technologies={['React', 'Next.js', 'CSS', 'Figma']}
+              projectLink="https://github.com/gilbertotumangday1/reactComponentPlayground"
+              linkText="View on GitHub"
+              TextLink="https://github.com/gilbertotumangday1/reactComponentPlayground"
               scale={3}
             />
           </div>

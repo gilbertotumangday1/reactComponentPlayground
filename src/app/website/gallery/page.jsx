@@ -23,13 +23,29 @@ export default function GalleryPage() {
       }}
     >
       <Navbar />
+
+      <div>
+          <h1
+            className="projects-header"
+            style={{
+              fontSize: '3rem',
+              fontWeight: 'bold',
+              color: 'white',
+              textAlign: 'center',
+              marginBottom: '0rem',
+              marginTop: '6rem',
+            }}
+          >
+            Photo Gallery
+          </h1>
+      </div>
       <main
         style={{
           flexGrow: 1,
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          padding: '4.5rem 2rem 2rem',
+          padding: '0rem',
         }}
       >
         <div
