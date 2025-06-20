@@ -1,0 +1,194 @@
+.swipe-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min-content;
+  max-width: 85vw;
+  max-height: 50vh;
+}
+
+.swipe-box-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  user-select: none;
+  max-width: 85vw;
+  max-height: 45vh;
+}
+
+.swipe-box-container:active {
+  cursor: grabbing;
+}
+
+.swipe-box-media {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.swipe-box-media img,
+.swipe-box-media video {
+  border-radius: 0.5rem;
+  max-width: 85vw;
+  max-height: 40vh;
+  object-fit: contain;
+}
+
+/* Navigation Arrows */
+.swipe-box-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, background-color 0.2s ease;
+  z-index: 10;
+}
+
+.swipe-box-container:hover .swipe-box-arrow {
+  opacity: 1;
+}
+
+.swipe-box-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.swipe-box-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.swipe-box-arrow:disabled:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.swipe-box-arrow-left {
+  left: 8px;
+}
+
+.swipe-box-arrow-right {
+  right: 8px;
+}
+
+/* Dots Indicator */
+.swipe-box-dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.swipe-box-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.swipe-box-dot:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.1);
+}
+
+.swipe-box-dot.active {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.2);
+}
+
+/* Mobile Touch Support */
+@media (max-width: 768px) {
+  .swipe-box {
+    max-width: 90vw;
+    max-height: 35vh;
+  }
+
+  .swipe-box-container {
+    max-width: 90vw;
+    max-height: 30vh;
+  }
+
+  .swipe-box-media img,
+  .swipe-box-media video {
+    max-width: 90vw;
+    max-height: 28vh;
+  }
+
+  .swipe-box-arrow {
+    opacity: 0.7;
+    width: 32px;
+    height: 32px;
+  }
+
+  .swipe-box-arrow-left {
+    left: 4px;
+  }
+
+  .swipe-box-arrow-right {
+    right: 4px;
+  }
+
+  .swipe-box-dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Tablet responsiveness */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .swipe-box {
+    max-width: 88vw;
+    max-height: 42vh;
+  }
+
+  .swipe-box-container {
+    max-width: 88vw;
+    max-height: 37vh;
+  }
+
+  .swipe-box-media img,
+  .swipe-box-media video {
+    max-width: 88vw;
+    max-height: 35vh;
+  }
+}
+
+/* Animation for smooth transitions */
+.swipe-box-media {
+  transition: opacity 0.3s ease;
+}
+
+/* Override Thumbnail and MediaPlayer styles within SwipeBox */
+.swipe-box .thumbnail,
+.swipe-box .media-player {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.swipe-box .thumbnail-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+} 

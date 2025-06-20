@@ -1,0 +1,46 @@
+/* Mobile responsive styles for projects page */
+@media (max-width: 768px) {
+  .projects-main {
+    padding: 1rem 1rem 0.5rem !important;
+    min-height: auto !important;
+    padding-top: 4rem !important;
+  }
+
+  .projects-header {
+    font-size: 2rem !important;
+    margin-top: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  .projects-container {
+    padding: 0.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-main {
+    padding: 0.5rem 0.5rem 0.25rem !important;
+    min-height: auto !important;
+    padding-top: 3.5rem !important;
+  }
+
+  .projects-header {
+    font-size: 1.5rem !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  .projects-container {
+    padding: 0.25rem !important;
+  }
+} 

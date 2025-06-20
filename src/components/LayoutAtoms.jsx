@@ -6,10 +6,20 @@ export function Container({ children, style = {} }) {
   return <div className="container" style={style}>{children}</div>;
 }
 
-export function Box({ children, style = {} }) {
-  return <div className="box" style={style}>{children}</div>;
+export function Box({ children, style = {}, className = '' }) {
+  return (
+    <div
+      style={{
+        display: 'block',
+        width: 'fit-content', // 👈 Add this!
+        ...style,
+      }}
+      className={className}
+    >
+      {children}
+    </div>
+  );
 }
-
 export function Bar({ children, style = {} }) {
   return <div className="bar" style={style}>{children}</div>;
 }

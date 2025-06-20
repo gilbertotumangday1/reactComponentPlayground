@@ -20,20 +20,22 @@
 .navbar-name {
   text-decoration: none;
   color: inherit;
+  flex-shrink: 0;
 }
 
 .navbar-links {
   display: flex;
   gap: 1.5rem;
   align-items: center;
-}
-
-.mobile-only {
-  display: none;
+  margin-left: auto;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .mobile-menu-container {
   position: relative;
+  margin-left: auto;
+  display: none;
 }
 
 .dropdown-menu {
@@ -53,12 +55,39 @@
   border-bottom: none !important;
 }
 
-@media (max-width: 768px) {
+.mobile-only {
+  display: none;
+}
+
+/* Reduce gap at medium screen sizes */
+@media (max-width: 1100px) {
+  .navbar-links {
+    gap: 1rem;
+  }
+}
+
+/* Switch to mobile when there's not enough space for heading + links */
+@media (max-width: 950px) {
   .navbar-links {
     display: none;
   }
 
+  .mobile-menu-container {
+    display: block;
+  }
+
   .mobile-only {
     display: block;
+  }
+}
+
+/* Additional breakpoint for very narrow screens */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 1rem 1rem;
+  }
+  
+  .navbar-heading {
+    font-size: 1.2rem;
   }
 }

@@ -1,0 +1,232 @@
+.project-card {
+  display: inline-block;
+  background-color: #2a2a40;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 0.75rem;
+  margin-top: 0px;
+  width: min-content;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(255, 255, 255, 0.2);
+}
+
+.project-card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min-content;
+  gap: 0.75rem;
+}
+
+/* Header */
+.project-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: min-content;
+}
+
+.project-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+  white-space: nowrap;
+}
+
+/* Media */
+.project-card-media {
+  width: min-content;
+}
+
+.single-media-container {
+  width: min-content;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.project-image {
+  display: block;
+  border-radius: 0.5rem;
+  max-width: 500px;
+  height: auto;
+}
+
+.single-media-container video {
+  display: block;
+  border-radius: 0.5rem;
+  max-width: 500px;
+  height: auto;
+}
+
+/* Override Thumbnail sizing within ProjectCard */
+.single-media-container .thumbnail {
+  width: auto !important;
+  max-width: none !important;
+}
+
+.single-media-container .thumbnail-image {
+  width: auto !important;
+  max-width: 500px !important;
+  height: auto;
+}
+
+/* Description */
+.project-card-description {
+  width: 100%;
+}
+
+.project-card-description .paragraph {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+/* Tags */
+.project-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.tech-tag {
+  padding: 0.25rem 0.65rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  font-size: 0.75rem;
+}
+
+.tech-tag .caption {
+  color: white;
+}
+
+/* Link */
+.project-card-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.link-text .caption {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .project-card {
+    margin-top: 50px;
+    padding: 0.6rem;
+  }
+
+  .project-card-title {
+    font-size: 1.3rem;
+  }
+
+  .project-image,
+  .single-media-container video,
+  .single-media-container .thumbnail-image {
+    max-width: 400px;
+  }
+
+  .project-card-description .paragraph {
+    font-size: 0.9rem;
+  }
+
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .project-card {
+    margin-top: 20px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .project-card-inner {
+    gap: 0.5rem;
+  }
+
+  .project-card-header {
+    gap: 0.4rem;
+  }
+
+  .project-card-title {
+    font-size: 1.1rem;
+  }
+
+  .project-image,
+  .single-media-container video,
+  .single-media-container .thumbnail-image {
+    max-width: 300px;
+  }
+
+  .single-media-container {
+    padding: 0.4rem;
+  }
+
+  .project-card-description .paragraph {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .tech-tag {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.4rem;
+  }
+
+  .project-card-link {
+    padding-top: 0.5rem;
+  }
+
+  .link-text .caption {
+    font-size: 0.75rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .project-card {
+    margin-top: 10px;
+    padding: 0.4rem;
+  }
+
+  .project-card-title {
+    font-size: 1rem;
+  }
+
+  .project-image,
+  .single-media-container video,
+  .single-media-container .thumbnail-image {
+    max-width: 250px;
+  }
+
+  .project-card-description .paragraph {
+    font-size: 0.8rem;
+  }
+
+  .tech-tag {
+    font-size: 0.6rem;
+    padding: 0.1rem 0.3rem;
+  }
+}
