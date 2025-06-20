@@ -1,4 +1,5 @@
 "use client";
+import React, { useState, useEffect } from 'react';
 import Button from "@/components/Button";
 import { Heading, Paragraph, Caption } from "@/components/Text";
 import { Linkedin, Github, Instagram } from "lucide-react";
@@ -18,8 +19,23 @@ import {
 import Avatar from "@/components/Avatar";
 import Thumbnail from "@/components/Thumbnail";
 import MediaPlayer from "@/components/MediaPlayer";
+import LoadingSpinner from '@/components/LoadingSpinner';
 
 export default function ComponentPlayground() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <LoadingSpinner text="Loading Library..." />;
+  }
+
   return (
     <main
       style={{

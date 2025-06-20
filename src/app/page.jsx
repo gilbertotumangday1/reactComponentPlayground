@@ -1,15 +1,30 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ClientOnly from '@/components/ClientOnly';
 import { Heading, Caption } from '@/components/Text';
 import IconButton from '@/components/IconButton';
 import ClickableText from '@/components/ClickableText';
 import TechMarquee from '@/components/TechMarquee';
+import LoadingSpinner from '@/components/LoadingSpinner';
 import { Linkedin, Github, Instagram } from 'lucide-react';
 import './WebsitePage.css'; // ⬅️ Import your styles here
 
 export default function WebsitePage() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1400);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <LoadingSpinner text="Loading Home..." />;
+  }
+
   return (
     <ClientOnly>
       <div

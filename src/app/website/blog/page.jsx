@@ -1,10 +1,25 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import { Caption } from '@/components/Text';
+import LoadingSpinner from '@/components/LoadingSpinner';
 
 export default function BlogPage() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <LoadingSpinner text="Loading Blog..." />;
+  }
+
   return (
     <div
       style={{
@@ -34,6 +49,19 @@ export default function BlogPage() {
           }}
         >
           {/* Empty content section - add your blog posts here */}
+          <h1
+            className="projects-header"
+            style={{
+              fontSize: '3rem',
+              fontWeight: 'bold',
+              color: 'white',
+              textAlign: 'center',
+              marginBottom: '1rem',
+              marginTop: '2rem',
+            }}
+          >
+            No Posts Yet...
+          </h1>
         </div>
       </main>
       <footer

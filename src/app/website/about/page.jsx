@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import { Caption, Paragraph } from '@/components/Text';
 import Avatar from "@/components/Avatar";
@@ -8,8 +8,23 @@ import ClickableText from '@/components/ClickableText';
 import IconButton  from '@/components/IconButton';
 import { Mail } from 'lucide-react';
 import Thumbnail from '@/components/Thumbnail';
+import LoadingSpinner from '@/components/LoadingSpinner';
 
 export default function AboutPage() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <LoadingSpinner text="Loading About..." />;
+  }
+
   return (
     <div
       style={{

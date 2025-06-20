@@ -1,13 +1,29 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import { Caption } from '@/components/Text';
 import ProjectCard from '@/components/ProjectCard';
 import SwipeBox from '@/components/SwipeBox';
+import LoadingSpinner from '@/components/LoadingSpinner';
 import './projects.css';
 
 export default function ProjectsPage() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time for components and assets
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1500); // 1.5 seconds loading time
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <LoadingSpinner text="Loading Projects..." />;
+  }
+
   return (
     <div
       style={{
