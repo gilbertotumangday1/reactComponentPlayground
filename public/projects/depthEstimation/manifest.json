@@ -1,0 +1,36 @@
+{
+  "projectName": "depthEstimation",
+  "generatedAt": "2025-01-15T12:00:00.000Z",
+  "files": [
+    {
+      "name": "1.png",
+      "type": "image",
+      "alt": "Deep Learning Model for Monocular Depth Estimation - Image 1"
+    },
+    {
+      "name": "2.png",
+      "type": "image",
+      "alt": "Deep Learning Model for Monocular Depth Estimation - Image 2"
+    },
+    {
+      "name": "3.png",
+      "type": "image",
+      "alt": "Deep Learning Model for Monocular Depth Estimation - Image 3"
+    },
+    {
+      "name": "4.png",
+      "type": "image",
+      "alt": "Deep Learning Model for Monocular Depth Estimation - Image 4"
+    },
+    {
+      "name": "5.png",
+      "type": "image",
+      "alt": "Deep Learning Model for Monocular Depth Estimation - Image 5"
+    },
+    {
+      "name": "6.png",
+      "type": "image",
+      "alt": "Deep Learning Model for Monocular Depth Estimation - Image 6"
+    }
+  ]
+}

@@ -64,6 +64,17 @@ export default function ProjectsPage() {
             }}
           >
             <ProjectCard
+              title="Deep Learning Model for Monocular Depth Estimation"
+              mediaFolder="/projects/depthEstimation"
+              description="Designed and implemented a monocular depth estimation pipeline in PyTorch, combining a ViT-B/16 encoder with a multi-scale convolutional decoder and custom loss functions to improve depth accuracy and structural consistency. Engineered data ingestion from the Hypersim dataset (~50k RGB–depth pairs) and achieved 92% accuracy on unseen indoor scenes for 3D reconstruction, robotics, and AR applications."
+              technologies={['PyTorch', 'Python', 'Computer Vision', 'Deep Learning', 'ViT', 'NumPy', 'Machine Learning']}
+              projectLink="https://github.com/thomaslin7/monocular_depth_estimation/tree/main"
+              linkText="View on GitHub"
+              TextLink="https://github.com/thomaslin7/monocular_depth_estimation/tree/main"
+              scale={2}
+            />
+
+            <ProjectCard
               title="Tourismate GIS"
               mediaFolder="/projects/tourismateGIS"
               description="Interactive GIS map with OSM upload, smart search, pathfinding, weather via LibCurl, and a Gemini-powered tourist chatbot."
@@ -71,7 +82,7 @@ export default function ProjectsPage() {
               projectLink="https://github.com/gilbertotumangday1/tourisMateGIS"
               linkText="View on GitHub"
               TextLink="https://github.com/gilbertotumangday1/tourisMateGIS"
-              scale={3}
+              scale={2.5}
             />
             
             <ProjectCard
@@ -84,7 +95,7 @@ export default function ProjectsPage() {
               linkText="View on GitHub"
               scale={2}
             />
-            
+
             <ProjectCard
               title="Stardew FPGA"
               mediaFolder="/projects/stardewFPGA"
@@ -104,7 +115,7 @@ export default function ProjectsPage() {
               projectLink="https://github.com/gilbertotumangday1/beast-hunter"
               linkText="View on GitHub"
               TextLink="https://github.com/gilbertotumangday1/beast-hunter"
-              scale={3}
+              scale={2}
             />
 
             <ProjectCard
@@ -117,6 +128,7 @@ export default function ProjectsPage() {
               TextLink="https://github.com/gilbertotumangday1/reactComponentPlayground"
               scale={3}
             />
+        
           </div>
         </div>
       </main>

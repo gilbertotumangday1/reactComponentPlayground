@@ -31,6 +31,7 @@ export default function Navbar() {
 
   const menuItems = [
     { href: '/website/about', label: 'About' },
+    { href: '/website/experience', label: 'Experience' },
     { href: '/website/projects', label: 'Projects' },
     { href: '/website/gallery', label: 'Gallery' },
     { href: '/website/blog', label: 'Blog' },

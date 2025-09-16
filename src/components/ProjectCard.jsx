@@ -136,7 +136,7 @@ export default function ProjectCard({
         }
         
         // If we hit 3 consecutive numbers with no files, stop searching
-        if (!foundFile && i > 3) {
+        if (!foundFile && i > 4) {
           const recentFiles = mediaItems.slice(-3);
           if (recentFiles.length === 0) {
             console.log(`No files found for numbers ${i-2} through ${i}, stopping search`);

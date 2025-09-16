@@ -73,6 +73,7 @@ export default function WebsitePage() {
             }}
           >
             <ClickableText href="/website/about">About</ClickableText>
+            <ClickableText href="/website/experience">Experience</ClickableText>
             <ClickableText href="/website/projects">Projects</ClickableText>
             <ClickableText href="/website/gallery">Gallery</ClickableText>
             <ClickableText href="/website/blog">Blog</ClickableText>
